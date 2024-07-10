@@ -1,0 +1,4 @@
+font/node_modules/
+webapi/.vscode/
+webapi/_pycache/
+**/.DS_Store

@@ -1,0 +1,29 @@
+.top {
+    width: 100%;
+    height: 10%;
+     display: flex;
+   /* flex-direction: row;
+    justify-content: flex-start;*/
+    align-items: center; 
+    /* background: linear-gradient(90deg, #ffa65d, #f19ff8,#7459FE); */
+}
+
+
+
+
+.top_icon {
+    width: 250px;
+    height: 80px;
+    margin-left: 50px;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+# 使用官方Nginx基础镜像
+FROM nginx:stable-alpine
+
+# 将构建产物复制到Nginx可以服务的目录下
+COPY dist/ /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/nginx.conf
+
+
+# 暴露80端口
+EXPOSE 80
+
+
+RUN apk add --no-cache curl
+
+
+# 启动Nginx，并且使Nginx保持前台运行
+CMD ["nginx", "-g", "daemon off;"]
+
+
+# HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+#   CMD curl -f http://localhost:5000 || exit 1
